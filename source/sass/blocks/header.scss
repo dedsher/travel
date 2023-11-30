@@ -1,0 +1,22 @@
+.header {
+}
+
+.header__wrapper {
+  background-color: $color-navy-blue;
+  padding: 32px 20px;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px 32px;
+
+  svg {
+    width: 142px;
+    height: 42px;
+    color: $color-default-white;
+  }
+}
