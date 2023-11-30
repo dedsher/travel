@@ -1,0 +1,39 @@
+{
+  "name": "travel",
+  "short_name": "travel",
+  "icons": [
+      {
+          "src": "img/favicons/favicon-512.webp",
+          "type": "image/webp",
+          "sizes": "16x16"
+      },
+      {
+          "src": "img/favicons/favicon-192.webp",
+          "type": "image/webp",
+          "sizes": "192x192"
+      },
+      {
+          "src": "img/favicons/favicon-512.webp",
+          "type": "image/webp",
+          "sizes": "512x512"
+      },
+      {
+          "src": "img/favicons/favicon-512.png",
+          "type": "image/png",
+          "sizes": "16x16"
+      },
+      {
+          "src": "img/favicons/favicon-192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+      },
+      {
+          "src": "img/favicons/favicon-512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+      }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
