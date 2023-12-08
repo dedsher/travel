@@ -1,0 +1,285 @@
+.intro {
+  position: relative;
+
+  width: 100vw;
+
+  color: $color-default-white;
+
+  @include vp-1199 {
+    text-align: center;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 940px;
+    margin: 0 0 25px 0;
+
+    font-weight: 800;
+    font-size: 77px;
+    line-height: 77px;
+
+    @include vp-1199 {
+      font-size: 56px;
+      line-height: 56px;
+      margin: 0 auto 15px auto;
+    }
+
+    @include vp-767 {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  p {
+    max-width: 464px;
+    margin: 0 0 35px 0;
+
+    font-size: 17px;
+    line-height: 24px;
+
+    @include vp-1199 {
+      max-width: 500px;
+      margin: 0 auto 25px auto;
+    }
+
+    @include vp-767 {
+      font-size: 15px;
+      line-height: 20px;
+      margin: 0 auto 60px auto;
+    }
+  }
+
+  a {
+    width: 180px;
+    margin: 0 0 134px 0;
+
+    @include vp-1199 {
+      margin: 0 0 45px 0;
+    }
+  }
+}
+
+.intro__card {
+  position: relative;
+  padding: 200px 0 80px;
+  min-height: 674px;
+
+  @include vp-1199 {
+    padding: 130px 0 90px;
+    min-height: 942px;;
+  }
+
+  @include vp-767 {
+    padding: 40px 0;
+    min-height: 468px;
+  }
+}
+
+.intro__card-wrapper {
+  position: relative;
+}
+
+.intro__info {
+  display: flex;
+
+  gap: 10px;
+
+  @include vp-1199 {
+    display: none;
+  }
+
+  span {
+    display: flex;
+    padding: 13px 20px;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    border: 1px solid rgba($color-default-white, 0.5);
+
+    gap: 8px;
+  }
+
+  img {
+    display: block;
+    margin: 0;
+    max-width: 12px;
+    max-height: 12px;
+  }
+}
+
+.intro__media {
+  position: absolute;
+  top: 129px;
+  right: 0;
+
+  width: 482px;
+  height: 317px;
+
+  @include vp-1199 {
+    position: relative;
+    width: 442px;
+    height: 300px;
+    top: unset;
+    right: unset;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+
+    background-color: $color-transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--second {
+    top: -13px;
+    width: 410px;
+    height: 459px;
+
+    @include vp-1199 {
+      width: 442px;
+      height: 365px;
+    }
+  }
+
+  &--third {
+    top: 226px;
+    width: 340px;
+    height: 220px;
+
+    @include vp-1199 {
+      top: unset;
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 24px;
+
+    width: 12px;
+    height: 22px;
+  }
+
+  iframe {
+    width: 482px;
+    height: 317px;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+
+    @include vp-1199 {
+      width: 442px;
+      height: 300px;
+    }
+  }
+}
+
+.intro__media-img-wrapper {
+
+}
+
+.intro__poster {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.intro__img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+
+  width: 100vw;
+  height: 100%;
+
+  transform: translateX(-50%);
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: $black-to-right;
+  }
+}
+
+.intro__pagination-wrapper {
+  position: relative;
+  bottom: 97px;
+
+  @include vp-1199 {
+    bottom: 40px;
+  }
+}
+
+.intro__pagination {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  left: calc(100% - 70px);
+
+  @include vp-1199 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.intro__bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $color-default-white;
+  display: block;
+  cursor: pointer;
+
+  &--active {
+    background-color: $color-default-white;
+  }
+}

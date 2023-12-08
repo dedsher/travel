@@ -1,12 +1,17 @@
 .header {
-  position: relative;
+  position: absolute;
   z-index: 10;
+  width: 100vw;
+
+  @include vp-1199 {
+    position: relative;
+  }
 }
 
 .is-active {
   .header__wrapper {
     ul {
-      top: 102px;
+      top: 82px;
 
       @include vp-767 {
         top: 110px;
