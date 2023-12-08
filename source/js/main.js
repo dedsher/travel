@@ -1,5 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
+import {initBurger} from './modules/init-burger';
+import {initPosters} from './modules/init-posters';
+import {initSliders} from './modules/init-sliders';
 
 // ---------------------------------
 
@@ -12,6 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+
+  initBurger();
+  initSliders();
+  initPosters();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

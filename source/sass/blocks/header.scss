@@ -1,9 +1,121 @@
 .header {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+
+  @include vp-1199 {
+    position: relative;
+  }
+}
+
+.is-active {
+  .header__wrapper {
+    ul {
+      top: 82px;
+
+      @include vp-767 {
+        top: 110px;
+      }
+    }
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  .header__logo {
+    svg {
+      color: $color-default-black;
+    }
+  }
+
+  .header__phone {
+    a {
+      color: $color-default-black;
+    }
+  }
 }
 
 .header__wrapper {
-  background-color: $color-navy-blue;
+  position: relative;
   padding: 32px 20px;
+  display: grid;
+  grid-template-columns: 205px auto 145px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  transition: background-color .3s ease-in-out;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-navy-blue;
+    content: "";
+    z-index: -1;
+    transition: background-color .3s ease-in-out;
+  }
+
+
+  @include vp-1199 {
+    position: static;
+    padding: 20px 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    padding: 15px 0;
+  }
+
+  nav {
+    @include vp-1199 {
+      order: -1;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0 30px;
+    margin: 0;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include vp-1199 {
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      left: 0;
+      flex-direction: column;
+      padding: 0 45px 70px;
+      background-color: $color-default-white;
+      transition: top .6s ease-in-out;
+      z-index: -1;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 10px 10px;
+    color: $color-default-white;
+    font-size: 16px;
+    line-height: 16px;
+
+    @include vp-1199 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0.64px;
+      text-transform: uppercase;
+      color: $color-default-black;
+      padding: 13px 0;
+    }
+  }
 }
 
 .header__logo {
@@ -11,12 +123,62 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 0;
-  padding: 10px 32px;
+
+  @include vp-767 {
+    justify-content: flex-end;
+  }
+
+  a {
+    padding: 10px 32px;
+    margin: 0;
+
+    @include vp-1199 {
+      padding: 0 42px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
 
   svg {
     width: 142px;
     height: 42px;
     color: $color-default-white;
+    display: block;
+  }
+}
+
+.header__phone {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: end;
+
+  @include vp-1199 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+
+    grid-column: 2;
+  }
+
+  a {
+    padding: 13px 0;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 }

@@ -2,21 +2,26 @@
   display: inline-flex;
   padding: 20px;
 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
   color: $color-default-white;
 
-  background-color: $color-resolution-blue;
+  background-color: $color-navy-blue;
   border: none;
   cursor: pointer;
+  justify-content: center;
+  border-radius: 6px;
 
   transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
